@@ -19,7 +19,7 @@ function buildTable(data) {
     // each value as a table cell (td)
         Object.values(dataRow).forEach((val) => {
         let cell = tbody.append("td");
-        cell.test(val)
+        cell.text(val)
         }
       );
 
@@ -28,7 +28,7 @@ function buildTable(data) {
 
 function handleClick() {
     // Grab the datetime value from the filter
-    let date = d3.select("datetime").property("value");
+    let date = d3.select("#datetime").property("value");
     let filteredData = tableData;
 
     // Check to see if a date was entered and filter the
